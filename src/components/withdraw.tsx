@@ -357,7 +357,6 @@ export function Withdraw(props:any) {
                       <button
                         className="hbutton"
                         color="success"
-                        style={{fontFamily: "Questrial"}}
                         onClick={(e) => {
                           e.preventDefault();
                           setActive({
@@ -403,16 +402,14 @@ export function Withdraw(props:any) {
               onSubmit={() => {
                 return false;
               }}
-              style={{width: '100%'}}
             >
               <div className="input-container">
-                <label htmlFor="targetAddr" style={{fontFamily: 'Questrial'}}>To address</label>
+                <label htmlFor="targetAddr">To address</label>
                 <input
                   type="text"
                   id="targetAddr"
                   value={targetAddr}
                   className={!isAddressValid ? 'error-input' : ''}
-                  style={{fontFamily: 'Questrial'}}
                   spellCheck="false"
                   autoComplete="off"
                   placeholder="0x943sI865PYt2W..."
@@ -423,15 +420,14 @@ export function Withdraw(props:any) {
                   }}
                 />
               </div>
-              <div className="lane" style={{ marginTop: '1rem'}}>
+              <div className="lane" style={{ marginTop: '1rem', padding: '0px 10px' }}>
                 <button
-                  className="hbutton hbutton-lnk usewallet"
+                  className="hbutton hbutton-lnk"
                   disabled={isSending}
                   onClick={(e) => {
                     e.preventDefault();
                     setTargetAddr(address || '');
                   }}
-                  style={{fontFamily: 'Questrial', color: "black"}}
                 >
                   use connected wallet
                 </button>

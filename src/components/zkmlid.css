@@ -2,14 +2,19 @@
 .zkmlid-content {
     position: relative;
     width: 100%;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+}
+.zkml-bg {
+    position: absolute;
 }
 .zkml-bg-img {
     object-fit: cover;
+}
+.zkml-body{
+    position: relative;
 }
 .zkml-circle-effect {
     position: absolute;
@@ -23,14 +28,16 @@
     text-align: center;
 }
 .zkmlid {
-    display: block;
+    background-color: #14161A;
+    display: flex;
+    flex-direction: row;
     border-radius: 2rem;
-    width: 100%;
-    position: relative;
+    width: 960px;
+    padding: 10px 10px;
 }
 .zkmlid-txt {
     font-size: 1.5rem;
-    color: #CAECF1;
+    color: white;
 }
 
 .zkmlid-header {
@@ -42,32 +49,27 @@
 }
 
 .zkmlid-body {
-    width: 100%;
-    display: block;
+    width: 68%;
+    display: flex;
+    flex-direction: column;
     border-radius: 2rem;
 }
 
 .zkmlid-body-generate {
-    background-color: #14161A;
+    background-color: #04050A;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 40px 20px;
-    margin-bottom: 20px;
+    margin: 0.2rem;
+    padding: 10px 20px;
 }
 .zkmlid-body-control {
-    background-color: #14161A;
+    background-color: #04050A;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 40px 20px;
-    margin-bottom: 20px;
-}
-.zkml-body-header {
-    padding: 0 20px;
-    min-height: 15vh;
+    margin: 0.5rem;
+    padding: 10px 20px;
 }
 .zkml-id-contracted {
     font-size: 1.2rem;
@@ -88,8 +90,7 @@
     padding: 0.6em 1em;
     background-color: #191b27;
     color: white; 
-    width: 45%;
-    margin: 0px 2.5%;
+    margin-right: 2rem;  
 }
 .zkml-button:hover {
     border-color: #38E5FF;
@@ -99,14 +100,15 @@
 .zkml_button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
-.zkml-id-warn-tooltip {
-    font-family: 'Questrial';
-}
+
 
 @media only screen and (max-width: 424px) {
     .zkmlid {
         width: 360px;
         margin: auto;
+    }
+    .zkml-bg {
+        display: none;
     }
     .zkmlid-header {
         display: none;
@@ -114,7 +116,6 @@
     .zkmlid-body {
         width: 100%;
         padding: auto;
-        flex-direction: column;
     }
     .zkml-button {
         width: 100%;
@@ -137,13 +138,19 @@
 }
 
 @media only screen and (min-width: 425px) and (max-width: 767px) {
+    .zkmlid {
+        width: 400px;
+        margin: auto;
+    }
+    .zkml-bg {
+        display: none;
+    }
     .zkmlid-header {
         display: none;
     }
     .zkmlid-body {
         width: 100%;
         padding: auto;
-        flex-direction: column;
     }
     .zkml-button {
         width: 100%;
@@ -166,6 +173,13 @@
 }
   
 @media only screen and (min-width: 768px) and (max-width: 960px) {
+    .zkmlid {
+        max-width: 708px;
+        margin: auto;
+    }
+    .zkml-bg {
+        display: none;
+    }
     .zkmlid-header {
         display: none;
     }
@@ -173,16 +187,13 @@
         width: 100%;
     }
 }
-@media only screen and (min-width: 1280px){
-    .zkmlid-body {
-        display: flex;
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+    .zkml-bg {
+        display: none;
     }
-    .zkmlid-body-control {
-        margin-left: 10px;
+    .zkml-body {
+        width: 960;
     }
-    .zkmlid-body-generate {
-        margin-right: 10px;
-    }
+    
 }
-
   
